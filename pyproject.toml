@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "musicgen-agent"
+version = "0.2.0"
+description = "A retrieval-augmented symbolic music generation agent for MIDI continuation."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "Zhuo2021" }]
+dependencies = []
+
+[project.optional-dependencies]
+llm = ["openai>=1.0"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+musicgen-agent = "musicgen_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
