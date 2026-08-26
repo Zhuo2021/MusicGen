@@ -10,7 +10,7 @@
 - **Agent 工作流清晰**：`seed melody -> corpus indexing -> retrieval -> continuation planning -> MIDI rendering -> evaluation`。
 - **工程化结构**：核心逻辑拆到 `src/musicgen_agent`，保留 `MusicGen.py` 作为兼容入口。
 - **可评估**：生成后输出音符数、音域、平均音程、密度、调式、重复率、大跳率等指标，方便和 RNN/LSTM 结果横向比较。
-- **面试可讲**：既能讲音乐理论特征，也能讲检索增强、模块设计、fallback 策略和测试。
+
 
 ## 快速运行
 
