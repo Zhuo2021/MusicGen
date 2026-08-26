@@ -49,11 +49,7 @@ lstm生成音乐/                  # 原始 LSTM 训练资料和 MIDI 数据
 Music_Gen_v1/                  # 早期 RAG 原型和 ChromaDB 资产
 ```
 
-## 设计取舍
 
-早期版本把 RAG 演示、ChromaDB、Prompt 和 OpenAI 调用写在一个脚本里，适合说明想法，但不适合给面试官直接运行。现在的版本把 LLM 依赖降级为可选项，先用确定性的 symbolic composer 保证 demo 稳定，再保留后续接入 LLM planner / MusicBERT embedding / ChromaDB 的空间。
-
-当前实现重点关注旋律续写。节奏使用检索片段的 rhythm pattern 迁移，不再全部等长；音高生成会参考相似 phrase 的 interval motion，并做可演奏音域约束，避免生成结果突然跳到不自然的极端音区。
 
 ## 测试
 
